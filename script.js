@@ -15,7 +15,7 @@ $(document).ready(function() {
 		const randColor = colors[rand(colors)];
 		let data = "";
 		let author = "";
-		data += "<blockquote>" + quotes[randQuoteNum].quote + "</blockquote>";
+		data += "<blockquote id='block'>" + quotes[randQuoteNum].quote + "</blockquote>";
 
 		author += "<span>- " + quotes[randQuoteNum].author + "</span>";
 		$("#quote-text").html(data);
@@ -23,6 +23,7 @@ $(document).ready(function() {
 		$("body").css("background-color", randColor);
 		$("#new-quote, #tweet").css("color",  "white");
 		$("#new-quote, #tweet").css("background-color", randColor);
+    $("#block").css("border-left-color", randColor);
 	});
 });
 
